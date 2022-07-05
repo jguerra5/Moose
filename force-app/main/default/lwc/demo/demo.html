@@ -1,9 +1,18 @@
-<!-- HTML Template: demo.html -->
+<!-- conditionalButton.html -->
+
 <template>
-    <lightning-card title="Basic DOM Example" icon-name="utility:hierarchy">
+    <lightning-card title="Conditional Rendering with Button" icon-name="utility:hierarchy">
         <div class="slds-card__body ">
             <p>
-                <lightning-formatted-text value={text}></lightning-formatted-text>
+                <template if:true={show}>
+                    Peek-a-boo!
+                </template>
+                <template if:false={show}>
+                    I'm hiding!
+                </template>
+            </p>
+            <p>
+                <lightning-button onclick={handleClick} variant="neutral" label="Switch"></lightning-button>
             </p>
         </div>
     </lightning-card>

@@ -1,5 +1,8 @@
-// JavaScript Module: demo.js
+//conditionalButton.js
 import { LightningElement } from 'lwc';
-export default class Demo extends LightningElement {
-    text = 'This text came from a JS prop';
+export default class ConditionalButton extends LightningElement {
+    show = true;
+    handleClick(){
+        this.show = !this.show;
+    }
 }
